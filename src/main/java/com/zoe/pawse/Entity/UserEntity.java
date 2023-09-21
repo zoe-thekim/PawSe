@@ -1,9 +1,6 @@
 package com.zoe.pawse.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +11,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @AllArgsConstructor
 @Builder
 @ToString
-@Service
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "NO")
     private int NO;
+
+    @Column(name = "ID")
     private String ID;
+
+    @Column(name = "PASSWORD")
     private String PASSWORD;
+
+    @Column(name = "EMAIL")
     private String EMAIL;
 }
