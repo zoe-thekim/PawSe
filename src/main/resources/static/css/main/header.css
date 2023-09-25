@@ -1,0 +1,11 @@
+.navbar li{
+    list-style-type: none;
+    float: left;
+}
+.navbar .navbar-detail{
+    float: right;
+    padding-right: 20px;
+}
+.navbar .navbar-detail li{
+    padding-right: 10px;
+}
