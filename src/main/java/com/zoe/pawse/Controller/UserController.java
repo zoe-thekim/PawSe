@@ -34,7 +34,11 @@ public class UserController {
     @PostMapping("/user/save")
     public String user_save(HttpServletRequest request, UserEntity user){
         System.out.println(user.toString());
-
+        UserEntity userEntity = UserEntity.builder()
+                .ID(user.getID())
+                .EMAIL(user.getEMAIL())
+                .PASSWORD(user.getPASSWORD())
+                .build();
 
         userRepository.save(user);
         return "redirect:/user/login";
